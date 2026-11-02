@@ -25,8 +25,8 @@ namespace TPLOCAL1.Controllers
                         //TODO : code reading of the xml files provide
                         return View(id);
                     case "Form":
-                        //TODO : call the Form view with data model empty
-                        return View(id);
+                        //// Affiche la vue Form vide 
+                        return View(id, new FormModel());
                     default:
                         //retourn to the Index view (see routing in Program.cs)
                         return View();

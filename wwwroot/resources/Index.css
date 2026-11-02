@@ -1,0 +1,14 @@
+﻿.image {
+    width: 150px;
+    height: 150px;
+    display: inline-block;
+    vertical-align: middle;
+}
+h1 {
+    margin-left: 170px;
+    margin-right: 170px;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+}
+

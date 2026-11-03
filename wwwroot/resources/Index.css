@@ -1,4 +1,6 @@
-﻿.image {
+﻿
+/*  En-tete */
+.image {
     width: 150px;
     height: 150px;
     display: inline-block;
@@ -11,6 +13,7 @@ h1 {
     display: inline-block;
     vertical-align: middle;
 }
+/*  Menu  */
 nav {
     width: 150px;
     border: 2px solid #8c014c;
@@ -25,6 +28,33 @@ li {
 a {
     color: chocolate;
 }
+
+/*  Contenu */
 section {
     margin-left: 170px;
+}
+
+/*  Tableaux  */
+table, td {
+    border: 2px solid #8c014c;
+}
+.titre {
+    background-color: #8c014c;
+    color: white;
+    text-align: center;
+}
+table {
+    margin-bottom: 20px;
+    width: 500px;
+}
+.avis {
+    height: 100px;
+    resize:none;
+}
+.label {
+    width: 35%;
+}
+input, textarea, select {
+    width : 100%;
+    box-sizing:border-box;
 }

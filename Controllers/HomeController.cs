@@ -37,7 +37,7 @@ namespace TPLOCAL1.Controllers
 
         //methode to send datas from form to validation page
         [HttpPost]
-        public ActionResult ValidationFormulaire(/*model*/)
+        public ActionResult ValidationForm(/*model*/)
         {
             //TODO : test if model's fields are set
             //if not, display an error message and stay on the form page

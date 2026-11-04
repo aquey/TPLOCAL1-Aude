@@ -37,12 +37,21 @@ namespace TPLOCAL1.Controllers
 
         //methode to send datas from form to validation page
         [HttpPost]
-        public ActionResult ValidationForm(/*model*/)
+        public ActionResult ValidationForm(FormModel model)
         {
-            //TODO : test if model's fields are set
-            //if not, display an error message and stay on the form page
-            //else, call ValidationForm with the datas set by the user
-            return null;
+            if (model.StartDate != null && model.StartDate >= new DateTime(2021, 01, 01))
+            {
+                ModelState.AddModelError("StartDate", "La date doit être antérieure au 01/01/2021");
+            }
+
+            if (ModelState.IsValid)
+            {
+                return View("ValidationForm", model);
+            }
+            else
+            {
+                return View("Form", model);
+            } 
 
         }
     }

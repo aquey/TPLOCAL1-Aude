@@ -28,11 +28,11 @@
             </tr>
             <tr>
                     <td class="label">Nom</td>
-                <td><input asp-for="LastName" placeholder="Entrez votre nom"></td>
+                    <td><input asp-for="LastName" placeholder="Entrez votre nom"><span asp-validation-for="LastName"></span></td>
             </tr>
             <tr>
                     <td class="label">Prénom</td>
-                <td><input asp-for="FirstName" placeholder="Entrez votre prénom"></td>
+                    <td><input asp-for="FirstName" placeholder="Entrez votre prénom"><span asp-validation-for="FirstName"></span></td>
             </tr>
             <tr>
                     <td class="label">Genre</td>
@@ -42,24 +42,24 @@
                         <option value="Homme">Homme</option>
                         <option value="Femme">Femme</option>
                         <option value="Autre">Autre</option>
-                   </select>
+                        </select><span asp-validation-for="Genre"></span>
                 </td>
             </tr>
             <tr>
                     <td class="label">Adresse</td>
-                <td><input asp-for="Address" placeholder="Entrez votre adresse"></td>
+                    <td><input asp-for="Address" placeholder="Entrez votre adresse"><span asp-validation-for="Address"></span></td>
             </tr>
             <tr>
                     <td class="label">Code postal</td>
-                    <td><input asp-for="PostalCode" placeholder="Entrez votre code postal (ex: 75001)"></td>
+                    <td><input asp-for="PostalCode" placeholder="Entrez votre code postal (ex: 75001)"><span asp-validation-for="PostalCode"></span></td>
             </tr>
             <tr>
                     <td class="label">Ville</td>
-                <td><input asp-for="City" placeholder="Entrez votre ville"></td>
+                    <td><input asp-for="City" placeholder="Entrez votre ville"><span asp-validation-for="City"></span></td>
             </tr>
             <tr>
                     <td class="label">Adresse courriel</td>
-                <td><input asp-for="Email" placeholder="Entrez votre adresse email"></td>
+                    <td><input asp-for="Email" placeholder="Entrez votre adresse email"><span asp-validation-for="Email"></span></td>
             </tr>
         </table>
         <table>
@@ -68,7 +68,7 @@
             </tr>
             <tr>
                     <td>Date de début de la formation</td>
-                    <td><input asp-for="StartDate" type="date"></td>
+                    <td><input asp-for="StartDate" type="date"><span asp-validation-for="StartDate"></span></td>
             </tr>
             <tr>
                     <td>Type de formation</td>
@@ -78,7 +78,7 @@
                             <option value="Formation Cobol">Formation Cobol</option>
                             <option value="Formation par objet">Formation par objet</option>
                             <option value="Formation à double compétence">Formation à double compétence</option>
-                        </select>
+                        </select><span asp-validation-for="CoursesType"></span>
                     </td>
                 </tr>
          </table>

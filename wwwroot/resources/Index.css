@@ -58,3 +58,11 @@ input, textarea, select {
     width : 100%;
     box-sizing:border-box;
 }
+/*Gestion des messages d'erreur*/
+.field-validation-error {
+    color: red;
+    background-color: #ffe6e6;
+}
+.input-validation-error {
+    border: 2px solid red;
+}

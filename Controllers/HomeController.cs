@@ -22,8 +22,10 @@ namespace TPLOCAL1.Controllers
                 switch (id)
                 {
                     case "OpinionList":
-                        //TODO : code reading of the xml files provide
-                        return View(id);
+                        string chemin = "XlmFile/DataAvis.xml";
+                        OpinionList lecteur = new OpinionList();
+                        List<Opinion> avis = lecteur.GetAvis(chemin);
+                        return View(id, avis);
                     case "Form":
                         //// Affiche la vue Form vide 
                         return View(id, new FormModel());

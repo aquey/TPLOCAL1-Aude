@@ -1,0 +1,56 @@
+﻿@model List<TPLOCAL1.Models.Opinion>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>HN - TP LOCAL</title>
+    <link href="~/resources/Index.css" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <img src="~/resources/GroupeHN.png" alt="HN Logo" class="image">
+        <h1>Welcome to TP HN</h1>
+
+    </header>
+    <nav>
+        <ul>
+            <li><a href="/Home/Index">Accueil</a></li>
+            <li><a href="/Home/Index/Form">Remplir le formulaire</a></li>
+        </ul>
+    </nav>
+    <section>
+        <h2>Liste</h2>
+        <p class="centre">Personnes ayant donné, ou non, leur avis sur la formation</p>
+
+        <table>
+            <thead>
+                <tr><td colspan="3" class="titre">Avis sur la formation </td></tr>
+                <tr>
+                    <th>Nom</th> 
+                    <th>Prénom</th>
+                    <th>Avis donné</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var opinion in Model)
+                {
+                    <tr>
+                        <td>@opinion.LastName</td>
+                        <td>@opinion.FirstName</td>
+                        @if (opinion.OpinionGiven == "O")
+                        {
+                            <td class="oui">Oui</td>
+
+                        }
+                        else
+                        {
+                            <td class="non">Non</td>
+                        }
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </section>
+</body>
+</html>

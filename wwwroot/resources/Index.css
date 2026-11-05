@@ -35,7 +35,7 @@ section {
 }
 
 /*  Tableaux  */
-table, td {
+table, td, th {
     border: 2px solid #8c014c;
 }
 .titre {
@@ -65,4 +65,14 @@ input, textarea, select {
 }
 .input-validation-error {
     border: 2px solid red;
+}
+.centre {
+    text-align: center;
+    width: 500px;
+}
+.oui {
+    color: green;
+}
+.non {
+    color: red;
 }

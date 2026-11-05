@@ -1,2 +1,90 @@
-﻿
-<h1>Votre formulaire a été pris en compte</h1>
+﻿@model TPLOCAL1.Models.FormModel
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>HN - TP LOCAL</title>
+    <link href="~/resources/Index.css" rel="stylesheet" />
+</head>
+<body>
+
+    <header>
+        <img src="~/resources/GroupeHN.png" alt="HN Logo" class="image">
+        <h1>Welcome to TP HN</h1>
+
+    </header>
+    <nav>
+        <ul>
+            <li><a href="/Home/Index">Accueil</a></li>
+            <li><a href="/Home/Index/OpinionList">Liste avis</a></li>
+        </ul>
+    </nav>
+    <section>
+        <h2>Validation du formulaire</h2>
+        <p class="centre">Votre formulaire a été pris en compte </p>
+
+        <table>
+            <tr>
+                <td colspan="2" class="titre">Informations personnelles</td>
+            </tr>
+            <tr>
+                <td class="label">Nom</td>
+                <td>@Model.LastName</td>
+            </tr>
+            <tr>
+                <td class="label">Prénom</td>
+                <td>@Model.FirstName</td>
+            </tr>
+            <tr>
+                <td class="label">Genre</td>
+                <td>@Model.Genre</td>
+            </tr>
+            <tr>
+                <td class="label">Adresse</td>
+                <td>@Model.Address</td>
+            </tr>
+            <tr>
+                <td class="label">Code postal</td>
+                <td>@Model.PostalCode</td>
+            </tr>
+            <tr>
+                <td class="label">Ville</td>
+                <td>@Model.City</td>
+            </tr>
+            <tr>
+                <td class="label">Adresse courriel</td>
+                <td>@Model.Email</td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <td colspan="2" class="titre">Informations sur la formation</td>
+            </tr>
+            <tr>
+                <td class="label">Date de début de la formation</td>
+                <td>@Model.StartDate?.ToString("dd/MM/yyyy")</td>
+            </tr>
+            <tr>
+                <td class="label">Type de formation</td>
+                <td> @Model.CoursesType</td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <td colspan="2" class="titre">Avis sur la formation </td>
+            </tr>
+            <tr>
+                <td class="label">Formation COBOL</td>
+                <td>@Model.CobolFormation</td>
+            </tr>
+            <tr>
+                <td class="label">Formation C#</td>
+                <td>@Model.CSharpFormation</td>
+            </tr>
+        </table>
+    </section>
+
+</body>
+
+</html>

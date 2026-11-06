@@ -7,11 +7,11 @@
     vertical-align: middle;
 }
 h1 {
-    margin-left: 170px;
-    margin-right: 170px;
+    margin-left: 20px;
     text-align: center;
     display: inline-block;
     vertical-align: middle;
+    width: 500px;
 }
 /*  Menu  */
 nav {
@@ -32,6 +32,14 @@ a {
 /*  Contenu */
 section {
     margin-left: 170px;
+}
+body {
+    width: 900px;
+    margin: 0 auto;
+}
+.centre {
+    text-align: center;
+    width: 500px;
 }
 
 /*  Tableaux  */
@@ -66,13 +74,12 @@ input, textarea, select {
 .input-validation-error {
     border: 2px solid red;
 }
-.centre {
-    text-align: center;
-    width: 500px;
-}
+
 .oui {
     color: green;
+    background-color: #e6ffe6;
 }
 .non {
     color: red;
+    background-color: #ffe6e6;
 }
